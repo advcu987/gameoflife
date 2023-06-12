@@ -65,6 +65,7 @@ def count_live_neighbors(status):
 		 [1, 1, 1]])
 
 	# The 'mode' argument determines how the edges of the universe are interpreted
+	# c = convolve2d(status, kernel, mode='same', boundary='wrap')
 	c = convolve2d(status, kernel, mode='same', boundary='fill', fillvalue=0)
 	return c
 
